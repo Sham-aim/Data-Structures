@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Pojects Vs\\Stack Array\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{195E6357-F572-42D4-ADA9-8FDAF8BBCBE8}|Stack Array.vcxproj|D:\\Pojects Vs\\Stack Array\\Stack Array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{195E6357-F572-42D4-ADA9-8FDAF8BBCBE8}|Stack Array.vcxproj|solutionrelative:Stack Array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Stack Array.cpp",
+              "DocumentMoniker": "D:\\Pojects Vs\\Stack Array\\Stack Array.cpp",
+              "RelativeDocumentMoniker": "Stack Array.cpp",
+              "ToolTip": "D:\\Pojects Vs\\Stack Array\\Stack Array.cpp",
+              "RelativeToolTip": "Stack Array.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-15T10:21:10.419Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

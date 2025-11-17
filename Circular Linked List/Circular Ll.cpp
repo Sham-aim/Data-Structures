@@ -29,12 +29,12 @@ public:
         Node* new_node = new Node(v);
         if (Empty()) {
             head = tail = new_node;
-            new_node->next = new_node; // circular link to itself
+            new_node->next = new_node;
         }
         else {
             new_node->next = head;
             head = new_node;
-            tail->next = head; // maintain circular link
+            tail->next = head;
         }
     }
 
@@ -56,7 +56,7 @@ public:
     void popfront() {
         if (Empty()) return;
 
-        if (head == tail) { // single node
+        if (head == tail) {
             delete head;
             head = tail = nullptr;
             return;
@@ -64,7 +64,7 @@ public:
 
         Node* old = head;
         head = head->next;
-        tail->next = head; // keep circular
+        tail->next = head;
         delete old;
     }
 
@@ -72,13 +72,11 @@ public:
     void popend() {
         if (Empty()) return;
 
-        if (head == tail) { // single node
+        if (head == tail) {
             delete head;
             head = tail = nullptr;
             return;
         }
-
-        // find node before tail
         Node* prev = head;
         while (prev->next != tail) {
             prev = prev->next;
@@ -87,7 +85,7 @@ public:
         delete tail;
         tail = prev;
     }
-    // Size Function
+   
     int size() {
         if (Empty()) return 0;
         int cnt = 0;
@@ -100,7 +98,6 @@ public:
         return cnt;
     }
 
-    // Count Function
     int count(int n) {
         if (Empty()) return 0;
         int cnt = 0;
@@ -113,7 +110,6 @@ public:
         return cnt;
     }
 
-    // Printing Function
     void print() {
         if (Empty()) {
             cout << "List is Empty" << endl;
@@ -126,59 +122,42 @@ public:
             if (cur == head) break;
         }
     }
+void erase(int v) {
+    if (Empty()) return;
+    Node* current = head;
+    Node* prev = tail;
 
-    void erase(int v) {
-        if (Empty()) return;
-
-        Node* current = head;
-        Node* prev = tail;         
-        bool started = false;
-
-        // loop until we've gone full circle (watch for head changes and emptying)
-        while (!Empty() && (!started || current != head)) {
-            started = true;
-            Node* next = current->next;
-
-            if (current->value == v) {
-                // single-node list
-                if (current == head && current == tail) {
-                    delete current;
+    while (true) {
+        if (current->value == v) {
+            if (current == head) {
+                if (head == tail) {
+                    delete head;
                     head = tail = nullptr;
-                    return; // list empty now
+                    return;
                 }
-                // removing head
-                else if (current == head) {
-                    head = next;
-                    tail->next = head;
-                    delete current;
-                    current = next;
-                    // prev stays as tail
-                }
-                // removing tail
-                else if (current == tail) {
-                    prev->next = next; // next == head
-                    delete current;
-                    tail = prev;
-                    current = next;
-                }
-                // removing middle node
-                else {
-                    prev->next = next;
-                    delete current;
-                    current = next;
-                    // prev stays the same
-                }
+                head = head->next;
+                tail->next = head;
+                delete current;
+                current = head;
             }
             else {
-                // not deleting: advance prev and current
-                prev = current;
-                current = next;
+                if (current == tail) {
+                    tail = prev;
+                }
+                prev->next = current->next;
+                delete current;
+                current = prev->next;
             }
-
-            // if list became empty during deletions, break
-            if (head == nullptr) break;
         }
+        else {
+            prev = current;
+            current = current->next;
+        }
+
+        if (current == head) break;
     }
+}
+
 
     void clear() {
         if (Empty()) return;
@@ -203,13 +182,6 @@ int main() {
     cout << "Size: " << list.size() << endl;
     cout << "Count(0): " << list.count(0) << endl;
 
-    cout << "Contents:" << endl;
-    list.print();
-
-    cout << "--- erase 8 ---" << endl;
-    list.erase(8);
-    list.print();
-    cout << "Size after erase: " << list.size() << endl;
 
     return 0;
 }

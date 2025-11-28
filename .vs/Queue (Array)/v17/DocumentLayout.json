@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Pojects Vs\\Queue (Array)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7E759D88-D146-426A-A2C9-7401DAC01C53}|Queue (Array).vcxproj|D:\\Pojects Vs\\Queue (Array)\\Queue (Array).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7E759D88-D146-426A-A2C9-7401DAC01C53}|Queue (Array).vcxproj|solutionrelative:Queue (Array).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Queue (Array).cpp",
+              "DocumentMoniker": "D:\\Pojects Vs\\Queue (Array)\\Queue (Array).cpp",
+              "RelativeDocumentMoniker": "Queue (Array).cpp",
+              "ToolTip": "D:\\Pojects Vs\\Queue (Array)\\Queue (Array).cpp",
+              "RelativeToolTip": "Queue (Array).cpp",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAADgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-11-28T16:32:03.842Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

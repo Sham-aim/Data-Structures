@@ -1,0 +1,12 @@
+﻿  trees.cpp
+D:\Pojects Vs\trees\trees.cpp(28,29): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+      D:\Pojects Vs\trees\trees.cpp(28,29):
+      the template instantiation context (the oldest one first) is
+          D:\Pojects Vs\trees\trees.cpp(101,26):
+          see reference to class template instantiation 'Simple_tree<int>' being compiled
+          D:\Pojects Vs\trees\trees.cpp(27,9):
+          while compiling class template member function 'int Simple_tree<int>::degree(void) const'
+              D:\Pojects Vs\trees\trees.cpp(123,50):
+              see the first reference to 'Simple_tree<int>::degree' in 'main'
+  
+  trees.vcxproj -> D:\Pojects Vs\trees\x64\Debug\trees.exe
